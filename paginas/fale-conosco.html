@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco | Soares & Tricheis Advogados</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .form-contato label {
+            display: block;
+            margin-top: 15px;
+            color: #d4af37;
+            font-weight: bold;
+        }
+        .form-contato input[type="text"],
+        .form-contato input[type="email"],
+        .form-contato textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #333;
+            background-color: #1a1a1a;
+            color: #fff;
+            border-radius: 4px;
+        }
+        .form-contato button {
+            background-color: #d4af37;
+            color: #000;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .form-contato button:hover {
+            background-color: #fff;
+        }
+
+        .contato-profissionais {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .contato-profissional {
+            flex: 1;
+            min-width: 250px;
+            background-color: #0a0a0a;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #1a1a1a;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nome-profissional {
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contato-item {
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .contato-item strong {
+            color: #fff;
+        }
+
+        /* Container para alinhar os botões */
+        .whatsapp-container {
+            margin-top: auto;
+            padding-top: 15px;
+        }
+
+        /* Botões do WhatsApp alinhados */
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-btn i {
+            font-size: 1.2rem;
+        }
+
+        /* Botão flutuante do WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+
+        .whatsapp-float i {
+            font-size: 2rem;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Tooltip para o botão flutuante */
+        .whatsapp-tooltip {
+            position: absolute;
+            right: 70px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .conteudo-pagina {
+                padding: 100px 20px !important;
+            }
+
+            .contato-profissionais {
+                flex-direction: column;
+            }
+
+            .contato-profissional {
+                min-width: 100%;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+
+            .whatsapp-float i {
+                font-size: 1.8rem;
+            }
+
+            .whatsapp-tooltip {
+                display: none;
+            }
+
+            .whatsapp-btn {
+                padding: 10px 20px;
+                max-width: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+                max-width: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topo">
+        <div class="logo">
+            <img src="../logo.png" alt="Logo Soares & Tricheis Advogados">
+        </div>
+        <nav class="menu">
+            <a href="../index.html">Home</a>
+            <a href="quem-somos.html">Quem Somos</a>
+            <a href="profissionais.html">Profissionais</a>
+            <a href="fale-conosco.html">Fale Conosco</a>
+        </nav>
+    </header>
+
+    <section class="conteudo-pagina" style="padding: 120px 80px; min-height: 80vh; max-width: 1000px; margin: 0 auto;">
+        <h2 style="color: #d4af37; margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 10px; text-align: center;">Fale Conosco</h2>
+
+        <p style="line-height: 1.6; color: #ccc; margin-bottom: 30px; text-align: center; font-size: 1.1rem;">
+            Precisando de auxílio jurídico? Entre em contato e agende uma consulta estratégica.
+        </p>
+
+        <div class="contato-profissionais">
+            <div class="contato-profissional">
+                <h3 class="nome-profissional">Helena Tricheis Alexandrino</h3>
+                <div class="contato-item">
+                    <strong>Telefone:</strong><br>
+                    (48) 99807-5387
+                </div>
+                <div class="contato-item">
+                    <strong>E-mail:</strong><br>
+                    helena@soaresetricheis.com.br
+                </div>
+                <div class="whatsapp-container">
+                    <a href="https://wa.me/5548998075387?text=Olá! Gostaria de agendar uma consulta com a Dra. Helena"
+                       class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="contato-profissional">
+                <h3 class="nome-profissional">Tiago da Silva Soares</h3>
+                <div class="contato-item">
+                    <strong>Telefone:</strong><br>
+                    (48) 99903-4556
+                </div>
+                <div class="contato-item">
+                    <strong>E-mail:</strong><br>
+                    tiago@soaresetricheis.com.br
+                </div>
+                <div class="whatsapp-container">
+                    <a href="https://wa.me/5548999034556?text=Olá! Gostaria de agendar uma consulta com o Dr. Tiago"
+                       class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <form class="form-contato" style="margin-top: 50px;">
+            <h3 style="color: #d4af37; margin-bottom: 20px; text-align: center;">Envie sua Mensagem</h3>
+
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5548998075387?text=Olá! Gostaria de mais informações sobre os serviços do escritório"
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">Fale conosco no WhatsApp</div>
+    </a>
+
+    <footer class="rodape">
+        <p>Nosso site utiliza cookies para melhorar a navegação.
+            <a href="politica-privacidade.html">Política de Privacidade</a> |
+            <a href="politica-cookies.html">Política de Cookies</a>
+        </p>
+    </footer>
+</body>
+</html>

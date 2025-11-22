@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos | Soares & Tricheis Advogados</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Importando a fonte DM Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'DM Serif Display', serif;
+            color: #000;
+            background-color: #f7f3dd;
+        }
+
+        .conteudo-pagina {
+            padding: 120px 80px;
+            min-height: 80vh;
+        }
+
+        .titulo-pagina {
+            color: #d4af37;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .texto-descritivo {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #4A3F35 !important;
+            font-family: 'DM Serif Display', serif !important;
+        }
+
+        /* Estilos para a imagem */
+        .container-imagem-texto {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .imagem-quem-somos {
+            width: 300px;
+            flex-shrink: 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .texto-quem-somos {
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            .conteudo-pagina {
+                padding: 100px 20px;
+            }
+
+            .container-imagem-texto {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .imagem-quem-somos {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topo">
+        <div class="logo">
+            <img src="../logo.png" alt="Logo Soares & Tricheis Advogados">
+        </div>
+        <nav class="menu">
+            <a href="../index.html">Home</a>
+            <a href="quem-somos.html">Quem Somos</a>
+            <a href="profissionais.html">Profissionais</a>
+            <a href="fale-conosco.html">Fale Conosco</a>
+        </nav>
+    </header>
+
+    <section class="conteudo-pagina">
+        <h2 class="titulo-pagina">Quem Somos</h2>
+
+        <div class="container-imagem-texto">
+            <img src="../imagens/quem_somos.jpg" alt="Escritório Soares & Tricheis Advogados" class="imagem-quem-somos">
+            <div class="texto-quem-somos">
+                <p class="texto-descritivo">
+                    Fundado em 2025, o escritório Soares & Tricheis Advogados nasce alicerçado na experiência consolidada de seus sócios, que acumulam anos de atuação no Direito. O nosso objetivo é unir a solidez técnica à visão inovadora da sociedade, oferecendo soluções jurídicas estratégicas e personalizadas, com foco na prevenção e efetiva resolução de conflitos.
+                </p>
+                <p class="texto-descritivo">
+                    Nossos diferenciais incluem atendimento imediato e personalizado, proporcionado por uma estrutura enxuta que permite maior flexibilidade e o estabelecimento de uma relação respeitosa de parceria. Conosco, você manterá contato direto com os sócios do escritório, garantindo conhecimento profundo e informações atualizadas sobre o caso.
+                </p>
+                <p class="texto-descritivo">
+                    Atuamos pautados pela ética e transparência, acompanhando cada cliente de forma individual e personalizada. Garantimos o compromisso contínuo pela excelência técnica e dedicação máxima aos casos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <p>Nosso site utiliza cookies para melhorar a navegação.
+            <a href="politica-privacidade.html">Política de Privacidade</a> |
+            <a href="politica-cookies.html">Política de Cookies</a>
+        </p>
+    </footer>
+</body>
+</html>

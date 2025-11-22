@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soares & Tricheis Advogados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos para a seção hero */
+        .hero {
+            position: relative;
+            height: 80vh;
+            background-image: url('imagem.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .mascara-container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 50%, rgba(0,0,0,0) 100%);
+            display: flex;
+            align-items: center;
+            padding-left: 40px;
+        }
+
+        .frase-content {
+            max-width: 500px;
+            padding: 40px 40px 40px 0;
+            text-align: left;
+        }
+
+        .frase-direito {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+
+        .destaque-ouro {
+            color: #d4af37;
+            font-weight: 800;
+        }
+
+        .autor-frase {
+            font-size: 1.2rem;
+            color: #d4af37;
+            font-style: italic;
+            border-left: 3px solid #d4af37;
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: #d4af37;
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #b8941f;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Versão com máscara mais larga */
+        /* .mascara-container {
+            width: 55%;
+            padding-left: 60px;
+        } */
+
+        /* Responsividade */
+        @media (max-width: 1024px) {
+            .mascara-container {
+                width: 55%;
+                padding-left: 30px;
+            }
+
+            .frase-content {
+                padding: 30px 30px 30px 0;
+            }
+
+            .frase-direito {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
+
+            .mascara-container {
+                width: 100%;
+                background: rgba(10,10,10,0.92);
+                justify-content: center;
+                padding-left: 0;
+            }
+
+            .frase-content {
+                text-align: center;
+                padding: 30px 20px;
+                max-width: 90%;
+            }
+
+            .frase-direito {
+                font-size: 1.8rem;
+            }
+
+            .autor-frase {
+                border-left: none;
+                padding-left: 0;
+                border-top: 2px solid #d4af37;
+                padding-top: 10px;
+                display: inline-block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 60vh;
+            }
+
+            .frase-direito {
+                font-size: 1.5rem;
+            }
+
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+
+            .autor-frase {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topo">
+        <div class="logo">
+            <img src="logo.png" alt="Logo Soares & Tricheis Advogados">
+        </div>
+
+        <button id="menu-toggle" aria-label="Abrir Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="menu" id="main-menu">
+            <a href="index.html">Home</a>
+            <a href="paginas/quem-somos.html">Quem Somos</a>
+            <a href="paginas/profissionais.html">Profissionais</a>
+            <a href="paginas/fale-conosco.html">Fale Conosco</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="mascara-container">
+            <div class="frase-content">
+                <h1 class="frase-direito">
+                    "A <span class="destaque-ouro">justiça</span> atrasada não é justiça,
+                    mas <span class="destaque-ouro">negação</span> manifesta de justiça"
+                </h1>
+                <p class="autor-frase">- William Gladstone</p>
+                <a href="paginas/fale-conosco.html" class="cta-button">Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <p>Nosso site utiliza cookies para melhorar a navegação.
+            <a href="paginas/politica-privacidade.html">Política de Privacidade</a> |
+            <a href="paginas/politica-cookies.html">Política de Cookies</a>
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('main-menu');
+
+            if (toggleButton && navMenu) {
+                toggleButton.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+
+                    // Altera o ícone de hambúrguer para fechar (X) e vice-versa
+                    const icon = toggleButton.querySelector('i');
+                    if (navMenu.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

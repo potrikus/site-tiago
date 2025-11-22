@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profissionais | Soares & Tricheis Advogados</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+    font-family: 'DM Serif Text', 'DM Serif Display', serif;
+    color: #5a4e3c !important; color: #6b5e4a;
+            background-color: #f7f3dd;
+            color: #333;
+        }
+
+        .conteudo-pagina {
+            padding: 120px 80px 60px;
+            min-height: 80vh;
+            background-color: #f7f3dd;
+        }
+
+        .titulo-pagina {
+            color: #d4af37;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .equipe {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .membro {
+            display: flex;
+            background-color: #f7f3dd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .membro:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .foto-container {
+            flex: 0 0 35%;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .foto-membro {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dados-membro {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .nome-membro {
+    font-family: 'DM Serif Display', serif;
+    color: #4a3f2e !important;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e3a5f;
+        }
+
+        .texto-perfil {
+    font-family: 'DM Serif Text', serif;
+    color: #5a4e3c !important;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .topo {
+            background-color: #0a0a0a;
+        }
+
+        @media (max-width: 768px) {
+            .conteudo-pagina {
+                padding: 100px 20px 40px;
+            }
+
+            .membro {
+                flex-direction: column;
+            }
+
+            .dados-membro {
+                padding: 25px;
+            }
+
+            .nome-membro {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topo">
+        <div class="logo">
+            <img src="../logo.png" alt="Logo Soares & Tricheis Advogados">
+        </div>
+        <nav class="menu">
+            <a href="../index.html">Home</a>
+            <a href="quem-somos.html">Quem Somos</a>
+            <a href="profissionais.html">Profissionais</a>
+            <a href="fale-conosco.html">Fale Conosco</a>
+        </nav>
+    </header>
+
+    <section class="conteudo-pagina">
+        <h2 class="titulo-pagina">Nossos Profissionais</h2>
+
+        <div class="equipe">
+            <!-- Helena -->
+            <div class="membro">
+                <div class="foto-container">
+                    <img class="foto-membro" src="../imagens/helena.jpg" alt="Helena Tricheis Alexandrino">
+                </div>
+                <div class="dados-membro">
+                    <h3 class="nome-membro">Helena Tricheis Alexandrino</h3>
+                    <p class="texto-perfil">
+                        Advogada, inscrita na Ordem dos Advogados do Brasil, seção de Santa Catarina, sob nº 63.897.
+                        Graduada pela Universidade do Extremo Sul Catarinense (UNESC) em 2021.
+                        Pós-graduada em Direito Processual Penal pelo Instituto Damásio Educacional.
+                        Presidente da Comissão da Jovem Advocacia da OAB Subseção de Criciúma (2025/2027).
+                        Membro da Comissão de Família e Sucessões da OAB Subseção de Criciúma.
+                        Atua especialmente com o Direito das Famílias e Criminal.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tiago -->
+            <div class="membro">
+                <div class="foto-container">
+                    <img class="foto-membro" src="../imagens/tiago.jpg" alt="Tiago da Silva Soares">
+                </div>
+                <div class="dados-membro">
+                    <h3 class="nome-membro">Tiago da Silva Soares</h3>
+                    <p class="texto-perfil">
+                        Advogado, inscrito na Ordem dos Advogados do Brasil, seção de Santa Catarina, sob nº 75.656.
+                        Graduado pela Universidade do Extremo Sul Catarinense (UNESC) em 2014.
+                        Mestrado em Desenvolvimento Socioeconômico pela Universidade do Extremo Sul Catarinense (UNESC).
+                        Atua especialmente com Contratos, Direito Imobiliário e Direito Previdenciário.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="rodape">
+        <p>Nosso site utiliza cookies para melhorar a navegação.
+            <a href="politica-privacidade.html">Política de Privacidade</a> |
+            <a href="politica-cookies.html">Política de Cookies</a>
+        </p>
+    </footer>
+</body>
+</html>
