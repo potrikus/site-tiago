@@ -77,6 +77,67 @@
             box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
         }
 
+        /* Nova seção de endereço */
+        .endereco-section {
+            background-color: #0a0a0a;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 2px solid #d4af37;
+        }
+
+        .endereco-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .endereco-titulo {
+            font-size: 1.8rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .endereco-info {
+            font-size: 1.2rem;
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .endereco-detalhes {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .endereco-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+        }
+
+        .endereco-item i {
+            color: #d4af37;
+            font-size: 1.2rem;
+        }
+
+        .mapa-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .mapa-link:hover {
+            border-bottom: 1px solid #d4af37;
+        }
+
         /* Versão com máscara mais larga */
         /* .mascara-container {
             width: 55%;
@@ -128,6 +189,19 @@
                 padding-top: 10px;
                 display: inline-block;
             }
+
+            .endereco-titulo {
+                font-size: 1.5rem;
+            }
+
+            .endereco-info {
+                font-size: 1.1rem;
+            }
+
+            .endereco-detalhes {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -145,6 +219,18 @@
             }
 
             .autor-frase {
+                font-size: 1rem;
+            }
+
+            .endereco-section {
+                padding: 30px 15px;
+            }
+
+            .endereco-titulo {
+                font-size: 1.3rem;
+            }
+
+            .endereco-info {
                 font-size: 1rem;
             }
         }
@@ -165,6 +251,7 @@
             <a href="paginas/quem-somos.html">Quem Somos</a>
             <a href="paginas/profissionais.html">Profissionais</a>
             <a href="paginas/fale-conosco.html">Fale Conosco</a>
+             <a href="paginas/noticias.html">Artigos e Noticias</a>
         </nav>
     </header>
 
@@ -178,6 +265,34 @@
                 <p class="autor-frase">- William Gladstone</p>
                 <a href="paginas/fale-conosco.html" class="cta-button">Fale Conosco</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Nova seção de endereço -->
+    <section class="endereco-section">
+        <div class="endereco-container">
+            <h2 class="endereco-titulo">Nossa Localização</h2>
+            <p class="endereco-info">
+                Edifício Titanium Trade Center<br>
+                Rua Araranguá, n. 35, sala 605<br>
+                Centro, Criciúma - SC<br>
+                88801-600
+            </p>
+            <div class="endereco-detalhes">
+                <div class="endereco-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Centro de Criciúma</span>
+                </div>
+                <div class="endereco-item">
+                    <i class="fas fa-building"></i>
+                    <span>Edifício Comercial</span>
+                </div>
+                <div class="endereco-item">
+                    <i class="fas fa-parking"></i>
+                    <span>Estacionamento Próximo</span>
+                </div>
+            </div>
+            <a href="#" class="mapa-link">Ver no mapa</a>
         </div>
     </section>
 
