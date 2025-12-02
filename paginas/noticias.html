@@ -10,15 +10,29 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
 
     <style>
+        /* Layout para fixar rodapé no final */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'DM Serif Display', serif;
             color: #000;
             background-color: #f7f3dd;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         .conteudo-pagina {
             padding: 120px 80px;
-            min-height: 80vh;
+            flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
 
         .titulo-pagina {
@@ -54,6 +68,28 @@
             flex: 1;
         }
 
+        /* Rodapé fixo no final */
+        .rodape {
+            margin-top: auto;
+            background-color: #0a0a0a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            border-top: 2px solid #d4af37;
+            box-sizing: border-box;
+        }
+
+        .rodape a {
+            color: #d4af37;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .rodape a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             .conteudo-pagina {
                 padding: 100px 20px;
@@ -68,6 +104,18 @@
                 width: 100%;
                 max-width: 400px;
                 margin: 0 auto;
+            }
+
+            .rodape {
+                padding: 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .rodape {
+                padding: 12px;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -87,8 +135,7 @@
     </header>
 
     <section class="conteudo-pagina">
-
-
+        <!-- Conteúdo da página virá aqui -->
 
     </section>
 

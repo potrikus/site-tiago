@@ -26,15 +26,18 @@
             width: 50%;
             height: 100%;
             background: linear-gradient(90deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 50%, rgba(0,0,0,0) 100%);
-            display: flex;
-            align-items: center;
+            display: flex !important;
+            align-items: flex-start !important;
             padding-left: 40px;
+            padding-top: 15vh !important;
         }
 
         .frase-content {
             max-width: 500px;
             padding: 40px 40px 40px 0;
             text-align: left;
+            margin-top: 0;
+            transform: translateY(0) !important;
         }
 
         .frase-direito {
@@ -146,17 +149,32 @@
             box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
         }
 
-        /* Versão com máscara mais larga */
-        /* .mascara-container {
-            width: 55%;
-            padding-left: 60px;
-        } */
+        /* Versão alternativa - com transform */
+        .mascara-container-alt {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.8) 50%, rgba(0,0,0,0) 100%);
+            display: flex;
+            align-items: flex-start;
+            padding-left: 40px;
+        }
+
+        .frase-content-alt {
+            max-width: 500px;
+            padding: 40px 40px 40px 0;
+            text-align: left;
+            margin-top: 15vh; /* Use margin-top em vez de padding-top no container */
+        }
 
         /* Responsividade */
         @media (max-width: 1024px) {
             .mascara-container {
                 width: 55%;
                 padding-left: 30px;
+                padding-top: 12vh !important;
             }
 
             .frase-content {
@@ -178,6 +196,8 @@
                 background: rgba(10,10,10,0.92);
                 justify-content: center;
                 padding-left: 0;
+                padding-top: 10vh !important;
+                align-items: flex-start !important;
             }
 
             .frase-content {
@@ -215,6 +235,10 @@
         @media (max-width: 480px) {
             .hero {
                 height: 60vh;
+            }
+
+            .mascara-container {
+                padding-top: 8vh !important;
             }
 
             .frase-direito {
@@ -267,10 +291,11 @@
         <div class="mascara-container">
             <div class="frase-content">
                 <h1 class="frase-direito">
-                    "A <span class="destaque-ouro">justiça</span> atrasada não é justiça,
-                    mas <span class="destaque-ouro">negação</span> manifesta de justiça"
+                    "Teu dever é lutar pelo <span class="destaque-ouro">Direito</span>,
+                    mas se um dia encontrares o Direito em conflito com a <span class="destaque-ouro">justiça</span>,
+                    luta pela <span class="destaque-ouro">justiça</span>"
                 </h1>
-                <p class="autor-frase">- William Gladstone</p>
+                <p class="autor-frase">- Eduardo Juan Couture</p>
                 <a href="paginas/fale-conosco.html" class="cta-button">Fale Conosco</a>
             </div>
         </div>
@@ -338,6 +363,9 @@
                     }
                 });
             }
+
+            // Limpar cache de estilos (opcional)
+            console.log('Estilos carregados - texto posicionado mais para baixo');
         });
     </script>
 </body>
